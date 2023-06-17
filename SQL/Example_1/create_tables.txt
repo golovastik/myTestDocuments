@@ -1,0 +1,16 @@
+create table Rooms(
+	Room int not null primary key,
+    Is_Inhabited varchar(10),
+    Category varchar(20),
+    Persons int,
+    Beds int
+);
+
+create table Guests(
+	id int not null primary key auto_increment,
+    First_Name varchar(50),
+    Second_Name varchar(50),
+    Phone_Number varchar(20),
+    Arrival_Date varchar(20),
+    Date_Of_Departure varchar(20)
+);
