@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "80fc1c0a-3150-437c-b34b-1b4347477ef9",
+		"name": "Users_bugred",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27402868"
+	},
+	"item": [
+		{
+			"name": "DoRegister",
+			"item": [
+				{
+					"name": "doRegister(Params_Valid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister?email=regemailvalid5@mail.mail&name=userCode_5&password=1q",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "regemailvalid5@mail.mail"
+								},
+								{
+									"key": "name",
+									"value": "userCode_5"
+								},
+								{
+									"key": "password",
+									"value": "1q"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "doRegister(Params_Invalid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister?email=regemailvalid1mail.mail&name=userCode_1&password=1q",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "regemailvalid1mail.mail"
+								},
+								{
+									"key": "name",
+									"value": "userCode_1"
+								},
+								{
+									"key": "password",
+									"value": "1q"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "doRegister(body_JSON_Valid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"regemailvalid_2_@mail.mail\",\r\n    \"name\": \" userCode_2\",\r\n    \"password\": \"1q\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "doRegister(body_JSON_Invalid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"regemailvalid_2_mail.mail\",\r\n    \"name\": \" userCode_2\",\r\n    \"password\": \"1q\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreateCompany",
+			"item": [
+				{
+					"name": "createCompany(Params+Body_Valid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company_users\": [\"regemailvalid5@mail.mail\", \"regemailvalid4@mail.mail\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createcompany?company_name=Name_of_company_1&company_type=ООО&email_owner=regemailvalid1@mail.mail",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createcompany"
+							],
+							"query": [
+								{
+									"key": "company_name",
+									"value": "Name_of_company_1"
+								},
+								{
+									"key": "company_type",
+									"value": "ООО"
+								},
+								{
+									"key": "email_owner",
+									"value": "regemailvalid1@mail.mail"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCompany(body_JSON_Valid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company_name\": \"Name_of_company_1\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"regemailvalid5@mail.mail\", \"regemailvalid4@mail.mail\"],\r\n  \"email_owner\": \"regemailvalid5@mail.mail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createcompany?company_name=Name_of_company_1&company_type=ООО&email_owner=regemailvalid1@mail.mail",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createcompany"
+							],
+							"query": [
+								{
+									"key": "company_name",
+									"value": "Name_of_company_1"
+								},
+								{
+									"key": "company_type",
+									"value": "ООО"
+								},
+								{
+									"key": "email_owner",
+									"value": "regemailvalid1@mail.mail"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
