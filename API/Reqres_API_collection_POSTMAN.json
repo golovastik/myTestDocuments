@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "24b23268-fbcb-459b-853f-423fc07737f8",
+		"_postman_id": "30f2ba89-cb59-4568-aef4-32a100761adb",
 		"name": "ReqresAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27402868"
@@ -254,8 +254,17 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://reqres.in/api/register?email=eve.holt@reqres.in&password=pistol",
+					"raw": "https://reqres.in/api/register",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -268,11 +277,13 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "eve.holt@reqres.in"
+							"value": "eve.holt@reqres.in",
+							"disabled": true
 						},
 						{
 							"key": "password",
-							"value": "pistol"
+							"value": "pistol",
+							"disabled": true
 						}
 					]
 				}
@@ -284,8 +295,17 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sydney@fife\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://reqres.in/api/register?email=sydney@fife",
+					"raw": "https://reqres.in/api/register",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -298,7 +318,8 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "sydney@fife"
+							"value": "sydney@fife",
+							"disabled": true
 						}
 					]
 				}
@@ -310,8 +331,17 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://reqres.in/api/login?email=eve.holt@reqres.in&password=cityslicka",
+					"raw": "https://reqres.in/api/login",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -324,11 +354,13 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "eve.holt@reqres.in"
+							"value": "eve.holt@reqres.in",
+							"disabled": true
 						},
 						{
 							"key": "password",
-							"value": "cityslicka"
+							"value": "cityslicka",
+							"disabled": true
 						}
 					]
 				}
@@ -340,8 +372,17 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://reqres.in/api/login?email=peter@klaven",
+					"raw": "https://reqres.in/api/login",
 					"protocol": "https",
 					"host": [
 						"reqres",
@@ -354,7 +395,8 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "peter@klaven"
+							"value": "peter@klaven",
+							"disabled": true
 						}
 					]
 				}
@@ -386,6 +428,26 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
