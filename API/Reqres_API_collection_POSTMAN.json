@@ -448,6 +448,7 @@
 					"pm.test(\"Status code is 200 - 204\", function () {",
 					"    pm.response.to.have.status(200, 201, 202, 203, 204);",
 					"});"
+					""
 				]
 			}
 		}
