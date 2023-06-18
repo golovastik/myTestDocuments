@@ -273,18 +273,6 @@
 					"path": [
 						"api",
 						"register"
-					],
-					"query": [
-						{
-							"key": "email",
-							"value": "eve.holt@reqres.in",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "pistol",
-							"disabled": true
-						}
 					]
 				}
 			},
@@ -314,13 +302,6 @@
 					"path": [
 						"api",
 						"register"
-					],
-					"query": [
-						{
-							"key": "email",
-							"value": "sydney@fife",
-							"disabled": true
-						}
 					]
 				}
 			},
@@ -350,18 +331,6 @@
 					"path": [
 						"api",
 						"login"
-					],
-					"query": [
-						{
-							"key": "email",
-							"value": "eve.holt@reqres.in",
-							"disabled": true
-						},
-						{
-							"key": "password",
-							"value": "cityslicka",
-							"disabled": true
-						}
 					]
 				}
 			},
@@ -391,13 +360,6 @@
 					"path": [
 						"api",
 						"login"
-					],
-					"query": [
-						{
-							"key": "email",
-							"value": "peter@klaven",
-							"disabled": true
-						}
 					]
 				}
 			},
@@ -448,7 +410,6 @@
 					"pm.test(\"Status code is 200 - 204\", function () {",
 					"    pm.response.to.have.status(200, 201, 202, 203, 204);",
 					"});"
-					""
 				]
 			}
 		}
