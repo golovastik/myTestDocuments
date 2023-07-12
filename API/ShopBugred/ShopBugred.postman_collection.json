@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "dbf1bce9-9bd0-4b7f-98d0-7d7a56c4de74",
-		"name": "ShopBugred",
+		"_postman_id": "4c0d4343-ae84-4784-b6d9-bedae4517249",
+		"name": "ShopBugred Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27402868"
 	},
@@ -503,6 +503,98 @@
 								"items",
 								"update",
 								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeleteItems",
+			"item": [
+				{
+					"name": "DeleteItem_1(Params)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/delete/?id=255",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"delete",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "255"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteItem_2(Params)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/delete/?id=240",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"delete",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "240"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteItem_3(Params)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/delete/?id=231",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"delete",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "231"
+								}
 							]
 						}
 					},
