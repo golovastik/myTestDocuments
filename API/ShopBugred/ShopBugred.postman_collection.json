@@ -603,6 +603,171 @@
 			]
 		},
 		{
+			"name": "SearchItems",
+			"item": [
+				{
+					"name": "SearchItem_1(брюки < 10)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/search/?query=Брюки",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Брюки"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchItem_2(сарафан > 10)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/search/?query=Сарафан",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Сарафан"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchItem_3(nothing)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/search/?query=Nothing",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Nothing"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchItem_4(Invalid request)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://shop.bugred.ru/api/items/search/?queryd=Сарафан",
+							"protocol": "http",
+							"host": [
+								"shop",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"api",
+								"items",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "queryd",
+									"value": "Сарафан"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "CheckItem_id",
 			"request": {
 				"method": "GET",
