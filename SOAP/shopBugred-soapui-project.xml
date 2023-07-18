@@ -270,7 +270,7 @@
       <rpc:create>\r
          <name>Ручка</name>\r
          <section>Test</section>\r
-         <description>Шариковая синяя ручка от дверей</description>\r
+         <description>Шаариковая синяя ручка от дверей</description>\r
          <color>Blue</color>\r
       </rpc:create>\r
    </soapenv:Body>\r
@@ -278,7 +278,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:create>\r
-         <name>mouse</name>\r
+         <name>mousse</name>\r
          <description>asdasdasd</description>\r
          <color>red</color>\r
       </rpc:create>\r
@@ -287,7 +287,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:create>\r
-         <name>Коврик</name>\r
+         <name>Ковdрик</name>\r
          <section>Test</section>\r
          <description>топ ковоер</description>\r
       </rpc:create>\r
@@ -298,7 +298,7 @@
       <rpc:create>
          <name>Телефон</name>
          <section>Test</section>
-         <description>С фото</description>
+         <description>С фоото</description>
          <color>Красный</color>
          <size>42</size>
          <price>1000</price>
