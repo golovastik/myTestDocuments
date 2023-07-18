@@ -268,7 +268,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:create>\r
-         <name>Ручка</name>\r
+         <name>Акацуки</name>\r
          <section>Test</section>\r
          <description>Шаариковая синяя ручка от дверей</description>\r
          <color>Blue</color>\r
@@ -320,7 +320,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:delete>\r
-         <id>274</id>\r
+         <id>271</id>\r
       </rpc:delete>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#delete"/><con:wsrmConfig version="1.2"/></con:call><con:call id="a1e23fa1-ba74-4287-9e3f-6c2ff781e7e7" name="Wrong req 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
@@ -334,7 +334,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:delete>\r
-        <name>rename</name>
+        <name>wrong</name>
       </rpc:delete>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#delete"/><con:wsrmConfig version="1.2"/></con:call><con:call id="da929734-706b-4542-bf1c-7791c4e2fd40" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
@@ -343,6 +343,13 @@
       <rpc:delete>\r
          <id>269</id>\r
          <name>Шортики Arcano 195</name>
+      </rpc:delete>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#delete"/><con:wsrmConfig version="1.2"/></con:call><con:call id="33ea9e5d-fe43-4915-9a77-5cb2290fa4c1" name="Wrong req 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:delete>\r
+         <id>-25</id>\r
       </rpc:delete>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#delete"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="420f1da9-6143-480b-a1de-b3a943c38f64" isOneWay="false" action="http://foo.bar/rpcliteralservice/#get" name="get" bindingOperationName="get" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03873a28-c927-4183-bb21-10ea29bcb049" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
