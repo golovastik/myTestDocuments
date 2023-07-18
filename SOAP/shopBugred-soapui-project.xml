@@ -268,7 +268,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:create>\r
-         <name>Ручка</name>\r
+         <name>Акацуки</name>\r
          <section>Test</section>\r
          <description>Шаариковая синяя ручка от дверей</description>\r
          <color>Blue</color>\r
