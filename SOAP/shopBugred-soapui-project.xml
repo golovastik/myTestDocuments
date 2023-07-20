@@ -416,14 +416,49 @@
          <size>50</size>
       </rpc:search>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#search"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ef466498-4af4-4abf-8259-c2fabe89f04a" isOneWay="false" action="http://foo.bar/rpcliteralservice/#select" name="select" bindingOperationName="select" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="43f5a91a-b904-457a-bf85-a7d3e6a731c5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#search"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ef466498-4af4-4abf-8259-c2fabe89f04a" isOneWay="false" action="http://foo.bar/rpcliteralservice/#select" name="select" bindingOperationName="select" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="43f5a91a-b904-457a-bf85-a7d3e6a731c5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:select>\r
-         <sql_query>?</sql_query>\r
+         <sql_query>select * from items where title = "Акацуки"</sql_query>\r
       </rpc:select>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/></con:call></con:operation><con:operation id="107648c5-5caa-4618-8adf-6df07d3e8868" isOneWay="false" action="http://foo.bar/rpcliteralservice/#update" name="update" bindingOperationName="update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="52670d43-81a8-4dc8-ac9c-5871b4cb340c" name="Wrong req 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/><con:wsrmConfig version="1.2"/></con:call><con:call id="29a0beee-da2e-4fa7-82a7-888648e74ede" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:select>\r
+         <sql_query>delete * from itams where title = "фильтр"</sql_query>\r
+      </rpc:select>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/><con:wsrmConfig version="1.2"/></con:call><con:call id="af26c7b4-1432-497f-bc17-e7de30b06de7" name="Wrong req"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:select>\r
+         <sql_query>select * from items where title = Акацуки</sql_query>\r
+      </rpc:select>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/><con:wsrmConfig version="1.2"/></con:call><con:call id="115636ff-09df-4d15-9e11-90f6f53ac9a9" name="Wrong req 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:select>\r
+         <sql_query>sdelect * from items where title = "Акацуки"</sql_query>\r
+      </rpc:select>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/><con:wsrmConfig version="1.2"/></con:call><con:call id="35691034-16a6-4019-9fee-85acfebd661e" name="Request 3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:select>\r
+         <sql_query>insert into itams(name, section, description) values ("first", "Test", "name of descri")</sql_query>\r
+      </rpc:select>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/><con:wsrmConfig version="1.2"/></con:call><con:call id="1d347496-6d5c-4236-92a5-c0aa7650d6ba" name="Request 4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:select>\r
+         <sql_query>update items set id = 99, name = "ggggg", section = "Test", description = "asdasdas" </sql_query>\r
+      </rpc:select>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#select"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="107648c5-5caa-4618-8adf-6df07d3e8868" isOneWay="false" action="http://foo.bar/rpcliteralservice/#update" name="update" bindingOperationName="update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="52670d43-81a8-4dc8-ac9c-5871b4cb340c" name="Wrong req 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:update>\r
