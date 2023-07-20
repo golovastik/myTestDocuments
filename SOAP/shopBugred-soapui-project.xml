@@ -352,14 +352,28 @@
          <id>-25</id>\r
       </rpc:delete>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#delete"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="420f1da9-6143-480b-a1de-b3a943c38f64" isOneWay="false" action="http://foo.bar/rpcliteralservice/#get" name="get" bindingOperationName="get" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03873a28-c927-4183-bb21-10ea29bcb049" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#delete"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="420f1da9-6143-480b-a1de-b3a943c38f64" isOneWay="false" action="http://foo.bar/rpcliteralservice/#get" name="get" bindingOperationName="get" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03873a28-c927-4183-bb21-10ea29bcb049" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:get>\r
-         <id>?</id>\r
+         <id>99</id>\r
       </rpc:get>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#get"/></con:call></con:operation><con:operation id="519076d9-7349-456a-81b9-bf34828a2aa0" isOneWay="false" action="http://foo.bar/rpcliteralservice/#search" name="search" bindingOperationName="search" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="838d3de8-5d9e-448e-96a1-a5b6928621b7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#get"/><con:wsrmConfig version="1.2"/></con:call><con:call id="14f5fab8-ca47-4eb7-8383-5c55e5ab56ae" name="Wrong req"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:get>\r
+         <id>150 + 1</id>\r
+      </rpc:get>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#get"/><con:wsrmConfig version="1.2"/></con:call><con:call id="4e1f2771-a868-4400-af47-af7f8cbfae7f" name="Wrong req 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <rpc:get>\r
+         <id>110</id>\r
+      </rpc:get>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://foo.bar/rpcliteralservice/#get"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="519076d9-7349-456a-81b9-bf34828a2aa0" isOneWay="false" action="http://foo.bar/rpcliteralservice/#search" name="search" bindingOperationName="search" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="838d3de8-5d9e-448e-96a1-a5b6928621b7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://shop.bugred.ru/soap.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rpc="http://foo.bar/rpcliteralservice">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:search>\r
@@ -417,7 +431,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <rpc:update>\r
-         <id>256</id>\r
+         <id>99</id>\r
          <name>фильтр</name>\r
          <section>Test</section>\r
          <description>фильтр фильтрует фильтрованные фтльтры ыыыыы</description>\r
