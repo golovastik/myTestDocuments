@@ -17,7 +17,8 @@ WHERE
 	select * from Customers where City IN ('London', 'Berlin');
 	select * from Customers where City NOT IN ('Madrid', 'Berlin', 'Bern');
 
-5) фильтрация по нескольким условиям с применением AND(выполняются все условия) или OR(выполняется хотя бы одно условие) и несколькими значениями
+5) фильтрация по нескольким условиям с применением AND(выполняются все условия) 
+   или OR(выполняется хотя бы одно условие) и несколькими значениями
 	select * from Customers where Country = 'Germany' AND City not in ('Berlin', 'Aahcen') AND CustomerID > 15;
 	select * from Customers where City in ('London', 'Berlin') OR CustomerID > 4;
 
@@ -28,14 +29,55 @@ GROUP BY
 7) группировка количества клиентов по стране и городу
 	select Country, City COUNT(CustomerID) from Customers GROUP BY Country, City;
 
-8) группировка продаж по ID товара с разными агрегатными функциями: количество заказов с данным товаром и количество проданных штук товара
+8) группировка продаж по ID товара с разными агрегатными функциями: количество заказов с 
+   данным товаром и количество проданных штук товара
 	select ProductID, COUNT(OrderID), SUM(Quantity) from OrderDetails GROUP BY ProductID;
 
-9) шруппирока продаж с фильтрацией исходной таблицы. В данном случае на выходе будет таблица с количеством клиентов по городам Гермнии
+9) шруппирока продаж с фильтрацией исходной таблицы. В данном случае на выходе будет таблица с 
+   количеством клиентов по городам Гермнии
 	select City, COUNT(CustomerID) from Customers where Country = 'Germany' GROUP BY City;
 
-10) переименование столбца с агрегацией с помощью оператора AS. По умолчанию название столбца с агрегацией равно переменной
+10) переименование столбца с агрегацией с помощью оператора AS. По умолчанию название столбца с 
+   агрегацией равно переменной
     агрегатной функции, что далее может быть не очень удобно для восприятия
 	select City, COUNT(CustomerID) AS NumberOfClients from Customers GROUP BY City;
 
+HAVING
+11) фильтрация агрегированной таблицы с количеством клиентов по городам, в данном случае 
+    оставляем в выгрузке только те горда, в которых не менее 5 клиентов
+	select City, count(CustomerID) from Customers group by City HAVING count(CustomerID) > 5; 
+
+12) в случае с переименованным столбцом внутри HAVING можно указать как и саму 
+    агрегирующую конструкцию count(CustomerID) так и новое название столбца number_of_clients 
+	select City, count(CustomerID) as number_of_clients from Customers group by City HAVING number_of_clients >= 5;
+
+13) пример запроса выражающего HAVING и WHERE. В данном запросе сначала фильтруется исходная таблица по пользователям, 
+    расчитывается количество клиентов по городам и остаются только те города где количество клиентов  не менее 5
+	select City, count(CustomerID) as number_of_clients from Customers 
+	WHERE CustomerName not in('Around the Horn','Drachenblut Delikatessend')
+	group by City
+	HAVING number_of_clients >= 5;
+
+ORDER BY
+14) сортировка по городу который указал клиент
+	select * from Customers ORDER BY City;
+
+15) сортировка по нескольким столбцам, в данном случае происходит сортировка по порядку указаных столбцов
+	select * from Customers ORDER BY Country, City;
+
+16) если нужно обратная сортировка то в конструкции ORDER BY после названия столбца надо добавить DESC
+	select * from Customers order by CustomerID DESC;
+
+17) обратная сотрировка по одному столбцу и сортировка по умолчанию по второму 
+	select * from Customers order by Country DESC, City;
+
+JOIN
+18) запрос в котором соединяем таблицы Orders и Customers по ключу CustomerID, при этом перед названием
+    столбца ключа добавляется название таблицы через точку
+	select * from Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+19) не редко возникает ситуация когда нужно промэппить одну таблицу значениями из другой. В зависимости от задачи 
+    могут использоваться разные типы присоеднинений. INNER JOIN - пересечение, RIGHT/LEFT JOIN для мэппинга 
+    одной таблицы значениями из жругой
+	select * from Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID where Customers.CustomerID > 10;
 
