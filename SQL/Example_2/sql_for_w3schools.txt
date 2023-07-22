@@ -1,0 +1,41 @@
+большое спасибо сайту за предоставленную базу данных https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_in
+выражаю благодарность сайту https://habr.com/ru/articles/480838/ и пользователю sokolov_alexr за предоставленную статью
+
+
+1) показывает все что есть в тавлице Categories
+	select * from Categories;
+
+2) показывает столбцы CustomerID, CustomerName из таблицы Customers
+	select CustomerID, CustomerName from Customers;
+
+
+WHERE
+3) фильтрация по одному условию WHERE City и одному знечению London
+	select * from Customers where City = 'London';
+
+4) фильтрация по одному условию и нескольким значениям с применением IN(включение) или NOT IN(исключение)
+	select * from Customers where City IN ('London', 'Berlin');
+	select * from Customers where City NOT IN ('Madrid', 'Berlin', 'Bern');
+
+5) фильтрация по нескольким условиям с применением AND(выполняются все условия) или OR(выполняется хотя бы одно условие) и несколькими значениями
+	select * from Customers where Country = 'Germany' AND City not in ('Berlin', 'Aahcen') AND CustomerID > 15;
+	select * from Customers where City in ('London', 'Berlin') OR CustomerID > 4;
+
+GROUP BY
+6) групировка количества клиентов по городу
+	select City, COUNT(CustomerID) from Customers GROUP BY City;
+
+7) группировка количества клиентов по стране и городу
+	select Country, City COUNT(CustomerID) from Customers GROUP BY Country, City;
+
+8) группировка продаж по ID товара с разными агрегатными функциями: количество заказов с данным товаром и количество проданных штук товара
+	select ProductID, COUNT(OrderID), SUM(Quantity) from OrderDetails GROUP BY ProductID;
+
+9) шруппирока продаж с фильтрацией исходной таблицы. В данном случае на выходе будет таблица с количеством клиентов по городам Гермнии
+	select City, COUNT(CustomerID) from Customers where Country = 'Germany' GROUP BY City;
+
+10) переименование столбца с агрегацией с помощью оператора AS. По умолчанию название столбца с агрегацией равно переменной
+    агрегатной функции, что далее может быть не очень удобно для восприятия
+	select City, COUNT(CustomerID) AS NumberOfClients from Customers GROUP BY City;
+
+
