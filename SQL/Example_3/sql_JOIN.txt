@@ -1,0 +1,15 @@
+1)
+select * from Products
+JOIN Categories ON Products.ProductID = Categories.CategoryID
+
+2)
+select * from Shippers
+JOIN Orders ON Orders.ShipperID = Shippers.ShipperID
+
+3)
+select * from Products
+JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID
+
+4)
+select Products.ProductID, Products.ProductName, Quantity, Price, (OrderDetails.Quantity * Products.Price) as cost  from OrderDetails
+JOIN Products ON OrderDetails.ProductID = Products.ProductID
