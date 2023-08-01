@@ -13,3 +13,12 @@ JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID
 4)
 select Products.ProductID, Products.ProductName, Quantity, Price, (OrderDetails.Quantity * Products.Price) as cost  from OrderDetails
 JOIN Products ON OrderDetails.ProductID = Products.ProductID
+
+5)
+select * from Products
+JOIN Categories ON Products.CategoryID = Categories.CategoryID
+
+6)
+select Orders.ShipperID, Shippers.ShipperName from Orders 
+JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+where ShipperName = "United Package";
