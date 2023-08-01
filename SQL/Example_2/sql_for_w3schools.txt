@@ -33,7 +33,7 @@ GROUP BY
    данным товаром и количество проданных штук товара
 	select ProductID, COUNT(OrderID), SUM(Quantity) from OrderDetails GROUP BY ProductID;
 
-9) шруппирока продаж с фильтрацией исходной таблицы. В данном случае на выходе будет таблица с 
+9) группирока продаж с фильтрацией исходной таблицы. В данном случае на выходе будет таблица с 
    количеством клиентов по городам Гермнии
 	select City, COUNT(CustomerID) from Customers where Country = 'Germany' GROUP BY City;
 

@@ -1,0 +1,11 @@
+1)
+select Country, COUNT(CustomerID) from Customers GROUP BY(Country);
+
+2)
+select City AS Goroda from Customers;
+
+3)
+select ShipperID, COUNT(ShipperID) from Orders GROUP BY ShipperID;
+
+4)
+select * from Orders where ShipperID = 2;
