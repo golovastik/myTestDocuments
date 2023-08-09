@@ -1,0 +1,8 @@
+1)
+select * from Orders WHERE EmployeeID > 4;
+
+2)
+select * from Products where Price > 40 and SupplierID > 15;
+
+3)
+select CategoryID, count(CategoryID) from Products group by CategoryID;
